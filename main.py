@@ -65,11 +65,6 @@ def salvar_arquivo():
         with open(caminho_arquivo, 'w') as arquivo:
             arquivo.write(editor_texto.get('1.0', tk.END))
 
-# def destacar_erros(erros_sintaticos):
-#     editor_texto.tag_configure('erro', background='red')
-#     for _, linha in erros_sintaticos:
-#         editor_texto.tag_add('erro', f"{linha}.0", f"{linha}.end")
-
 app = tk.Tk()
 app.title("Compilador MINI Java")
 

@@ -25,11 +25,6 @@ class MyLexer(object):
         t.type = self.reserved.get(t.value,'IDENTIFIER')
         return t
 
-    # def t_IDENTIFIER1(self, t):
-    #     r'[a-zA-Z_][a-zA-Z_0-9]*|\d+|\d+\.\d+'
-    #     t.type = self.reserved.get(t.value,'IDENTIFIER1')
-    #     return t
-
     def t_REAL(self, t):
         r'\d+\.\d+'
         t.value = float(t.value)
@@ -95,7 +90,6 @@ class MyLexer(object):
         r'\n+'
         t.lexer.lineno += len(t.value)
 
-    # Regra para tratar erros
     def t_error(self, t):
         print(f"Illegal character '{t.value[0]}'")
         t.lexer.skip(1)
@@ -423,12 +417,6 @@ def p_relationalExpression(p):
                        | empty
     '''
 
-# def p_relationalExpressionOpt(p):
-#     '''
-#     relationalExpressionOpt : relationalExpression
-#                             | empty
-#     '''
-
 
 def p_operationalExpression(p):
     '''
@@ -442,15 +430,6 @@ def p_additiveExpression(p):
                       | empty
     '''
 
-
-# def p_additiveExpressionOpt(p):
-#     '''
-#     additiveExpressionOpt : additiveExpression
-#                       | empty
-#     '''
-
-
-
 def p_term(p):
     '''
     term : unaryExpression multiplicativeExpression
@@ -463,12 +442,6 @@ def p_multiplicativeExpression(p):
                            | MOD unaryExpression multiplicativeExpression
                            | empty
     '''
-
-# def p_multiplicativeExpressionOpt(p):
-#     '''
-#     multiplicativeExpressionOpt : multiplicativeExpression
-#                       | empty
-#     '''
 
 def p_unaryExpression(p):
     '''
