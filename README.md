@@ -17,7 +17,7 @@ pip install ply
 ## Executando o Programa
 
 ```bash
-python nome_do_programa.py
+python main.py
 ```
 
 ## Uso
