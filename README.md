@@ -12,11 +12,13 @@ Este programa depende das bibliotecas `tkinter` e `ply`. `tkinter` normalmente j
 
 ```bash
 pip install ply
+```
 
 ## Executando o Programa
 
 ```bash
 python nome_do_programa.py
+```
 
 ## Uso
 
