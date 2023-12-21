@@ -1,0 +1,23 @@
+public void main(){
+
+
+// boolean
+
+/*
+if
+else
+*/
+
+boolean
+vascodagama
+public
+
+boolean
+
+}
+
+public class MiniJava {
+    public static void main(String[] args) {
+        System.out.println("Olá, Mundo!");
+    }
+}

@@ -1,0 +1,37 @@
+public class Calculadora {
+    public static void main(String[] args) {
+        double numero1 = 10.0;
+        double numero2 = 5.0;
+
+        double soma = somar(numero1, numero2);
+        double subtracao = subtrair(numero1, numero2);
+        double multiplicacao = multiplicar(numero1, numero2);
+        double divisao = dividir(numero1, numero2);
+
+        System.out.println("Resultado da soma: " + soma);
+        System.out.println("Resultado da subtração: " + subtracao);
+        System.out.println("Resultado da multiplicação: " + multiplicacao);
+        System.out.println("Resultado da divisão: " + divisao);
+    }
+
+    public static double somar(double a, double b) {
+        return a + b;
+    }
+
+    public static double subtrair(double a, double b) {
+        return a - b;
+    }
+
+    public static double multiplicar(double a, double b) {
+        return a * b;
+    }
+
+    public static double dividir(double a, double b) {
+        if (b != 0) {
+            return a / b;
+        } else {
+            System.out.println("Erro: Divisão por zero.");
+            return Double.NaN; // Retorna NaN (Not-a-Number) em caso de divisão por zero.
+        }
+    }
+}
